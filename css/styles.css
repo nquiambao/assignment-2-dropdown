@@ -1,0 +1,199 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #00263e;
+    background: linear-gradient(rgb(255,105,180), rgb(255,186,0));
+    font-size: 1.6rem;
+}
+
+.inner-container {
+    padding: 1rem;
+}
+
+/* ******************** typography ******************** */
+
+h1 {
+    letter-spacing: 5px;
+    font-size: 3rem;
+}
+
+h1 a {
+    color: #00263e;
+    text-decoration: none;
+}
+
+h1::first-letter {
+    color:rgb(255,105,180);
+}
+
+h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* ******************** header ******************** */
+
+header {
+    background-color: #fff;;
+}
+
+.menu-icon {
+    width: 40px;
+    text-align: center;
+}
+
+.menu-icon .icon {
+    width: 4rem;
+    height: 4rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.active-nav {
+    max-height: 100vh;
+}
+
+.main-menu li {
+    margin: 0 15px;
+    line-height: 85px;
+    border-bottom: 1px solid #e3eaf3;
+    white-space: nowrap;
+}
+
+.main-menu li:last-of-type {
+    border-bottom: none;
+}
+
+.main-menu a  {
+    /* padding-left: 10px; */
+    text-decoration: none;
+    display: block;
+    color: #00263e;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #f89d70
+}
+
+/* active state for moblie click conformation */
+.main-menu a:active {
+    background-color: #e3eaf3;
+    border-radius: 5px;
+}
+
+.main-menu li:hover > .dropdown-menu {
+    max-height: 100vh;
+}
+
+a.first-link {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+a.first-link .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+a.first-link .icon:first-of-type {
+    margin-right: 1rem;
+}
+
+a.first-link .icon:last-of-type {
+    margin-left: auto;
+}
+
+/* .icon-circle-solid,
+.icon-down-chevron {
+    width: 1.5rem;
+} */
+
+.pink {
+    fill: #fd3c85;
+}
+
+.green {
+    fill: #82c14a;
+}
+
+.yellow {
+    fill: #fece30;
+}
+
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.dropdown-menu a {
+    color: #00263e;
+    font-weight: 400;
+    text-transform: none;
+}
+
+
+
+
+/* ******************** content area ******************** */
+
+section {
+    margin: 50px 0;
+}
+
+/* wider menu insert code here  */
+
+@media only screen and (min-width: 510px) {
+    .menu-icon {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        overflow: visible;
+        max-height: 100vh;
+        width: auto;
+    }
+
+    ul.main-menu {
+        display: flex;
+    }
+
+    .wide-flex {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .main-menu li {
+        border-bottom: none;
+    }
+
+    .main-menu a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    body {
+        max-width: 1299px;
+        margin: 0 auto;
+    }
+}
